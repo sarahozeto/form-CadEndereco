@@ -19,13 +19,22 @@ Como dito anteriormente, o usuário preenche o CEP e, se ele for válido, todos 
 
 <img src="IMG/ezgif-func1.gif">
 
+Quando o usuário digita no campo o código verifica se o CEP digitado existe, caso o CEP não exista o site retorna uma mensagem de alerta para o usuário, para isso... 
+
+Se o usuário digitar uma sequência onde tenha letras, o código retornará uma mensagem alertando para digitar apenas números, usamos ... para verificar se há números no campo digitado e ...
+
+Se o que foi digitado tiver o número de digitos menor ou maior o código novamente vai reconhecer e o alertar, isso acontece graças ao ...
+
+E, por fim, o ... faz com que, quando o usuário clicar no botão "Cadastrar" o formulário limpe, ...
+
+
 ### PREENCHER O FORMULÁRIO
 
-![gif](IMG/ezgif-func2.gif)
+<img src="IMG/ezgif-func2.gif">
 
 ### LIMPAR O FORMULÁRIO
 
-![gif](IMG/ezgif-fun3.gif)
+<img src="IMG/ezgif-func3.gif">
 
 ## Tecnologias utilizadas
 Neste projetos tivemos o uso de:
