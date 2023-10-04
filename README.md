@@ -17,15 +17,15 @@ Como dito anteriormente, o usuário preenche o CEP e, se ele for válido, todos 
 
 ### VALIDANDO O CEP
 
-
+<img src="IMG/ezgif-func1.gif">
 
 ### PREENCHER O FORMULÁRIO
 
-![gif](ezgif-func2.gif)
+![gif](IMG/ezgif-func2.gif)
 
 ### LIMPAR O FORMULÁRIO
 
-![gif](ezgif-fun3.gif)
+![gif](IMG/ezgif-fun3.gif)
 
 ## Tecnologias utilizadas
 Neste projetos tivemos o uso de:
