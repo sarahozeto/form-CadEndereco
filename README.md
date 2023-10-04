@@ -15,9 +15,9 @@ Durante a aula aprendemos como validar o CEP usando o Arrow Function. Para prati
 ## Funcionalidades
 Como dito anteriormente, o usuário preenche o CEP e, se ele for válido, todos os outros campos são preenchidos mas caso o CEP não exista ou não seja válido, o contrário acontece. Mas como isso foi feito e como acontece? Abaixo você verá as explicações de cada parte do código.
 
-### VERFICAR SE O CEP É VÁLIDO
+### VALIDANDO O CEP
 
-![gif](IMG/ezgif-func1.gif)
+![gif](GIF/ezgif-func1.gif)
 
 ### PREENCHER O FORMULÁRIO
 
