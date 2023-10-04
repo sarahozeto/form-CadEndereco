@@ -17,7 +17,7 @@ Como dito anteriormente, o usuário preenche o CEP e, se ele for válido, todos 
 
 ### VALIDANDO O CEP
 
-![gif]<img src="/assets/img/ezgif-fun1">
+![gif]<img src="/assets/img/ezgif-fun1.gif">
 
 ### PREENCHER O FORMULÁRIO
 
