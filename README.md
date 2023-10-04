@@ -7,19 +7,25 @@
 
 # Projeto de Formulário para Cadastro de Endereço - Introdução
 
-![capa](IMG/pg1.png)
+![capa](IMG/imgcapa.png)
 
-Durante a aula aprendemos como validar o CEP usando o Arrow Function. Para praticar, criamos um fomrulário de endereço que tem como foco o preenchimento e validação do CEP.
+Durante a aula aprendemos como validar o CEP usando o Arrow Function. Para praticar criamos um fomrulário de endereço que, quando o usuário preenche o CEP e este é válidado, automaticamente os outros campos são preenchidos. 
 
 
 ## Funcionalidades
-
-### LIMPAR O FORMULÁRIO
+Como dito anteriormente, o usuário preenche o CEP e, se ele for válido, todos os outros campos são preenchidos mas caso o CEP não exista ou não seja válido, o contrário acontece. Mas como isso foi feito e como acontece? Abaixo você verá as explicações de cada parte do código.
 
 ### VERFICAR SE O CEP É VÁLIDO
 
+![gif](IMG/ezgif-func1.gif)
+
 ### PREENCHER O FORMULÁRIO
 
+![gif](IMG/ezgif-func2.gif)
+
+### LIMPAR O FORMULÁRIO
+
+![gif](IMG/ezgif-fun3.gif)
 
 ## Tecnologias utilizadas
 Neste projetos tivemos o uso de:
@@ -30,6 +36,7 @@ Neste projetos tivemos o uso de:
 * BOOTSTRAP 5
 
 ## Fontes consultadas
+[Acessando o webservice de CEP](https://viacep.com.br/)
 
 ## Autores
 Sarah Ozeto, com a orientação do professor Leonardo Rocha.
