@@ -17,38 +17,23 @@ Como dito anteriormente, o usuário preenche o CEP e, se ele for válido, todos 
 
 ### VALIDANDO O CEP
 
-<img src="img/ezgif-func1.gif">
+<img src="IMG/ezgif-func1.gif">
 
-const eNumero = (numero) => /^[0-9]+$/.test(numero);
-const cepValido = (cep) => cep.length == 8 && eNumero(cep);
+<img src="IMG/img.func1.png">
 
 Quando o usuário digitar, o código vai verificar se o o que foi digitado contém a quantidade de digitos corretos. De uma forma mais simplificada: funciona como um compartimento com nove entradas, o resultado apenas será aceito caso tenha a quantidade correta de digitos e, na segunda linha, especificamos que essa quantidade é oito e que deverá conter apenas números. Em outras palavras, é como se dissessemos "apenas será verdadeiro se o que for escrito tiver oito digitos e todos forem números".
 
 
-
- **const url = `http://viacep.com.br/ws/${cep.value}/json/`;
-
-    if(cepValido(cep.value)){
-        const dados = await fetch(url); // esperar
-        const addres = await dados.json(); // retorna dados no formato JSON 
-
-        if(addres.hasOwnProperty('erro')){
-            alert('CEP NÃO ENCONTRADO! DIGITE UM CEP EXISTENTE.');
-        }else{
-            preencherForm(addres);
-        }
-    }else{
-        alert('CEP INCORRETO!');
-    }**
+<img src="IMG/img.func2.png">
 
 Outro evento que acontece é que o código reconhece caso o usuário digitar um CEP inexistente. Para que isso aconteça foi feito uma espécie de ponte entre o nosso código e o site da viacep, usando o **fetch**, que possibilita fazer chamadas com APIs externas de formas simples e assíncronas. Após criarmos essa ligação, foi usado o **hasOwnProperty** para verificar se o que foi digitado existe ou não, ele verifica dentro da variável e depois retorna um alert dependendo do resultado.É como se o fetch começasse o trabalho e o hasOwnProperty terminasse. 
 
 
 ### LIMPAR E PREENCHER FORMULÁRIO
 
-<img src="img/ezgif-func2.gif">
+<img src="IMG/ezgif-func2.gif">
 
-Document.getElementById('cep').addEventListener('focusout',pesquisaCep);
+<img src="IMG/img.func3.png">
 
 Quando o CEP for validado, ao passar de um campo para o outro, o formulário limpa antes de preencher com novas informações e isso ocorre graças ao **addEventListener('focusout')**. Explicando brevemente nós adicionamos um evento e o **focusout** atua quando o foco saí da linha selecionada, então ele só vai executar esse comando quando o foco sair da linha, enquanto a linha estiver selecionada nada vai acontecer.
 
