@@ -13,28 +13,46 @@ Durante a aula aprendemos como validar o CEP usando o Arrow Function. Para prati
 
 
 ## Funcionalidades
-Como dito anteriormente, o usuário preenche o CEP e, se ele for válido, todos os outros campos são preenchidos mas caso o CEP não exista ou não seja válido, o contrário acontece. Mas como isso foi feito e como acontece? Abaixo você verá as explicações de cada parte do código.
+Como dito anteriormente, o usuário preenche o CEP e, se ele for válido, todos os outros campos são preenchidos mas caso o CEP não exista ou não seja válido, o contrário acontece. Mas como isso foi feito e como acontece? Abaixo você verá as explicações de cada parte do código!
 
 ### VALIDANDO O CEP
 
-<img src="IMG/ezgif-func1.gif">
+<img src="img/ezgif-func1.gif">
 
-Quando o usuário digita no campo o código verifica se o CEP digitado existe, caso o CEP não exista o site retorna uma mensagem de alerta para o usuário, para isso... 
+const eNumero = (numero) => /^[0-9]+$/.test(numero);
+const cepValido = (cep) => cep.length == 8 && eNumero(cep);
 
-Se o usuário digitar uma sequência onde tenha letras, o código retornará uma mensagem alertando para digitar apenas números, usamos ... para verificar se há números no campo digitado e ...
-
-Se o que foi digitado tiver o número de digitos menor ou maior o código novamente vai reconhecer e o alertar, isso acontece graças ao ...
-
-E, por fim, o ... faz com que, quando o usuário clicar no botão "Cadastrar" o formulário limpe, ...
+Quando o usuário digitar, o código vai verificar se o o que foi digitado contém a quantidade de digitos corretos. De uma forma mais simplificada: funciona como um compartimento com nove entradas, o resultado apenas será aceito caso tenha a quantidade correta de digitos e, na segunda linha, especificamos que essa quantidade é oito e que deverá conter apenas números. Em outras palavras, é como se dissessemos "apenas será verdadeiro se o que for escrito tiver oito digitos e todos forem números".
 
 
-### PREENCHER O FORMULÁRIO
 
-<img src="IMG/ezgif-func2.gif">
+ **const url = `http://viacep.com.br/ws/${cep.value}/json/`;
 
-### LIMPAR O FORMULÁRIO
+    if(cepValido(cep.value)){
+        const dados = await fetch(url); // esperar
+        const addres = await dados.json(); // retorna dados no formato JSON 
 
-<img src="IMG/ezgif-func3.gif">
+        if(addres.hasOwnProperty('erro')){
+            alert('CEP NÃO ENCONTRADO! DIGITE UM CEP EXISTENTE.');
+        }else{
+            preencherForm(addres);
+        }
+    }else{
+        alert('CEP INCORRETO!');
+    }**
+
+Outro evento que acontece é que o código reconhece caso o usuário digitar um CEP inexistente. Para que isso aconteça foi feito uma espécie de ponte entre o nosso código e o site da viacep, usando o **fetch**, que possibilita fazer chamadas com APIs externas de formas simples e assíncronas. Após criarmos essa ligação, foi usado o **hasOwnProperty** para verificar se o que foi digitado existe ou não, ele verifica dentro da variável e depois retorna um alert dependendo do resultado.É como se o fetch começasse o trabalho e o hasOwnProperty terminasse. 
+
+
+### LIMPAR E PREENCHER FORMULÁRIO
+
+<img src="img/ezgif-func2.gif">
+
+Document.getElementById('cep').addEventListener('focusout',pesquisaCep);
+
+Quando o CEP for validado, ao passar de um campo para o outro, o formulário limpa antes de preencher com novas informações e isso ocorre graças ao **addEventListener('focusout')**. Explicando brevemente nós adicionamos um evento e o **focusout** atua quando o foco saí da linha selecionada, então ele só vai executar esse comando quando o foco sair da linha, enquanto a linha estiver selecionada nada vai acontecer.
+
+Após limpar, o formulário preenche com novas informações e o mesmo comando anterior faz essa tarefa.
 
 ## Tecnologias utilizadas
 Neste projetos tivemos o uso de:
